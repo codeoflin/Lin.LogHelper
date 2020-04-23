@@ -17,7 +17,7 @@ namespace Lin.LogHelper
             }
             catch (Exception err)
             {
-
+                err.LogForError();
             }
 
         }
