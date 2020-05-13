@@ -24,5 +24,11 @@ namespace Lin.LogHelper
 		/// </summary>
 		/// <returns></returns>
 		internal static HashSet<string> ErrorBlackLsit = new HashSet<string>();
+		
+		/// <summary>
+		/// Warning黑名单
+		/// </summary>
+		/// <returns></returns>
+		internal static HashSet<string> WarningBlackLsit = new HashSet<string>();
 	}
 }

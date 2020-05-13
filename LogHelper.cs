@@ -48,10 +48,11 @@ namespace Lin.LogHelper
 				if (classtype.Name != thisclassname) break;
 			}
 			var classname = classtype == null ? thisclassname : classtype.Name;
-            
+
 			if (cls == "Debug" && Public_Var.DebugBlackLsit.Contains(classtype.AssemblyQualifiedName)) return;
 			if (cls == "Info" && Public_Var.InfoBlackLsit.Contains(classtype.AssemblyQualifiedName)) return;
-			if (cls == "ErrorBlackLsit" && Public_Var.ErrorBlackLsit.Contains(classtype.AssemblyQualifiedName)) return;
+			if (cls == "Error" && Public_Var.ErrorBlackLsit.Contains(classtype.AssemblyQualifiedName)) return;
+			if (cls == "Warning" && Public_Var.WarningBlackLsit.Contains(classtype.AssemblyQualifiedName)) return;
 
 			var path = $"./Logs/{DateTime.Now.ToString("yyyy-MM-dd")}/";
 			lock (LOCKER)
