@@ -21,6 +21,7 @@ nuget安装这个包之后,在需要使用扩展方法的文件里,引用如下�
 ```SHARP
 using Lin.LogHelper;
 ```
+
 ### 文本日志
 
 ```SHARP
@@ -56,4 +57,15 @@ catch (Exception err)
 {
     err.LogForError();
 }
+```
+
+### 设置
+
+当我们对某个类进行调试的时候可能会在这个类里面记录大量的Debug日志,当调试结束,可以通过设置,一次性让指定的类所有Debug日志不再记录
+只要在类里面调用这个方法即可:
+例子中的方法,可以屏蔽指定类的Debug日志. 该方法在哪个class调用就对哪个class生效,必须直接调用,不要间接调用!
+
+
+```SHARP
+Lin.LogHelper.Config.LogForDebugDisable();
 ```
